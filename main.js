@@ -3,13 +3,15 @@ let display = document.querySelector("#display")
 
 // Krasj programmet viss JavaScripten ikke finner et Element med ID "display"
 if (display === null) {
-  throw new Error("Please create an HTML element with ID display")
+  // **throw new Error(message)** er en metode for oss å si at det har skjedd
+  // en eller annen feil og det er ikke vits å fortsette programmet lenger
+  // så stopp (krasj) det, og print ut en feilmelding
+  throw new Error("Please create an HTML element with ID of display")
 }
 
-/**
- * Funksjonen blir "blokker" med kode som vi kan kjøre på et seiner tidspunkt
- */
-
+// ==============================================================================
+// = Funksjonen blir "blokker" med kode som vi kan kjøre på et seiner tidspunkt =
+// ==============================================================================
 
 /**
  * Øker verdien på display elementet vårt
@@ -43,15 +45,13 @@ function decrement() {
 let buttonIncrement = document.querySelector("#button-increment")
 let buttonDecrement = document.querySelector("#button-decrement")
 
-// Legge til funksjonenen (Event Listners & Event Handlers | Hendelses Lyttere & Hendeles Håndterer)
+// Legge til funksjonene (Event Listners & Event Handlers | Hendelses Lyttere & Hendeles Håndterer)
 buttonIncrement.addEventListener("click", increment)
 buttonDecrement.addEventListener("click", decrement)
 
-
-
-/**
- * Funksjons argumenter (parametre)
- */
+// ====================================
+// = Funksjons argumenter / parametre =
+// ====================================
 
 /**
  * Dette er en JSDoc kommentar, brukes for å dokumenter JavaScript
@@ -61,6 +61,7 @@ buttonDecrement.addEventListener("click", decrement)
  * @param {string} title title til en person
  */
 function greeting(name, title) {
+  // Konstruer strengen (kan gjøres på litt forskjellige måter)
   let greetingString = "Greeting" + " " + title + " " + name
   
   return greetingString
