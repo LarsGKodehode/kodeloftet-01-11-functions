@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script defer src="main.js"></script>
-  <title>Functions</title>
+  <title>Funksjoner</title>
 </head>
 <body>
+  <h1>Funksjoner</h1>
 
   <div>
-    <h2>Counter</h2>
+    <h2>Teller</h2>
     <p>
-      Current count:
+      Nåværendes Verdi:
       <span id="display">0</span>
     </p>
 
-    <button id="button-increment">Increment</button>
-    <button id="button-decrement">Decrement</button>
+    <button id="button-increment">Legg Til</button>
+    <button id="button-decrement">Trekk Fra</button>
   </div>
   
 
   <div>
-    <h2>Greeting creator</h2>
-    <button id="button-greet">Greet</button>
+    <h2>Generer en Hilsing</h2>
+    <button id="button-greet">Log Hilsener</button>
+  </div>
+
+  
+  <form id="form-log-in">
+    <label for="text-input">Bruker Navn</label>
+    <input type="text" id="text-input" />
+    <button type="submit">Log På</button>
+  </form>
+
+  <div>
+    <h2>Arrow Function Eksempel</h2>
+    <button id="button-example">Arrow Function</button>
   </div>
 </body>
 </html>

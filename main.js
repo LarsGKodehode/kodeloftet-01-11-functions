@@ -81,3 +81,59 @@ function greetAll() {
 
 let buttonGreet = document.querySelector("#button-greet")
 buttonGreet.addEventListener("click", greetAll)
+
+// ================================
+// = Måter å skrive funksjoner på =
+// ================================
+
+// Vanlige funksjoner
+// i hovedsak så bruker du denne
+function myFunction(parameter1, parameter2) {
+  // Steg 1
+
+  // Steg 2
+
+  // returner et eller annet viss du ønsker
+  return 
+}
+
+// Arrow Functions (også kjent som Anonyme Funksjoner, formelt kalt Lambda Funksjoner)
+// Vanligvis brukt når funksjonen kun skal brukes en plass
+// Typisk for hendelser som intreffer i Dokumentet
+(parameter1, parameter2) => {
+  // Steg 1
+
+  // Steg 2
+
+  // returner et eller annet viss du ønsker
+  return 
+}
+
+// Det gjør at vi kan skrive alt på en linje
+document
+  .querySelector("#button-example")
+  .addEventListener("click", (event) => {
+    // Gjør logikken i denne blokken her, på lik linje som vanlige funksjoner
+    console.log(event)
+})
+
+
+// ================================================================
+// = Neste steg blir å lese av informasjon relatert til hendelsen =
+// ================================================================
+
+function handleInputChange(event) {
+  let value = event.target.value
+
+  console.log("Greeting " + value)
+}
+
+let textInput = document.querySelector("#text-input")
+textInput.addEventListener("input", handleInputChange)
+
+function logIn(event) {
+  event.preventDefault()
+}
+
+let formLogIn = document.querySelector("#form-log-in")
+formLogIn.addEventListener("submit", logIn)
